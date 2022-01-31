@@ -11,11 +11,45 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:elevation="24dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="24dp"
+            app:cardMaxElevation="24dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/editTextTextPersonNames"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:elevation="24dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="24dp"
+            app:cardMaxElevation="24dp">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </androidx.cardview.widget.CardView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:foregroundGravity="center"
             android:gravity="center"
@@ -40,6 +74,6 @@
                 android:textColorLink="#FFFFFF" />
 
         </LinearLayout>
-
     </LinearLayout>
+
 </LinearLayout>
