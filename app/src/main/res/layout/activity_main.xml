@@ -16,19 +16,22 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="350dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
             android:elevation="24dp"
             app:cardCornerRadius="25dp"
             app:cardElevation="24dp"
-            app:cardMaxElevation="24dp"
-            android:layout_margin="10dp">
+            app:cardMaxElevation="24dp">
 
-            <EditText
-                android:id="@+id/editTextTextPersonNames"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:ems="10"
-                android:inputType="textPersonName" />
+                app:startIconDrawable="@drawable/email_vector">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
