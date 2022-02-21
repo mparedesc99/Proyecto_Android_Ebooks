@@ -7,26 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class LoginActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     TextView tx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_sign_up);
 
         getSupportActionBar().hide();
 
-    tx = (TextView) findViewById(R.id.toLogIn);
-    tx.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-                Intent it=new Intent(view.getContext(),SignUpActivity.class);
+        tx = (TextView) findViewById(R.id.toLogIn);
+        tx.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it=new Intent(view.getContext(),LoginActivity.class);
                 startActivity(it);
-        }
-    });
+            }
+        });
     }
-
-
 }

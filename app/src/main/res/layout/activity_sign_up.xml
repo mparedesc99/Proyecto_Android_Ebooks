@@ -4,15 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".SignUpActivity"
     android:orientation="vertical"
     android:background="@drawable/rectangle">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            app:boxCornerRadiusBottomEnd="24dp"
+            app:boxCornerRadiusBottomStart="24dp"
+            app:boxCornerRadiusTopEnd="24dp"
+            app:boxCornerRadiusTopStart="24dp"
+            app:boxStrokeColor="@color/white"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:startIconDrawable="@drawable/ic_person">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:hint="Name"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="350dp"
@@ -64,6 +91,12 @@
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I agree to terms and conditions"
+            android:textColor="#FFFFFF" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"
                 android:backgroundTint="#9CFBFBFB"
-                android:text="Log in"
+                android:text="Sign Up"
                 android:textColor="#000000"
                 app:cornerRadius="24dp" />
 
@@ -88,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="Create new account >"
+                android:text="Already have an account? > "
                 android:textColor="@color/white"
                 android:textColorLink="#FFFFFF" />
 
@@ -98,3 +131,4 @@
     </LinearLayout>
 
 </LinearLayout>
+

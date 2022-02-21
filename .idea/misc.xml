@@ -4,8 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/alvar/AndroidStudioProjects/Proyecto_Android_Ebooks/app/src/main/res/drawable/email_vector.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Proyecto_Android_Ebooks/app/src/main/res/drawable/ic_home.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Proyecto_Android_Ebooks/app/src/main/res/drawable/ic_person.xml" value="0.14166666666666666" />
         <entry key="..\:/Users/alvar/AndroidStudioProjects/Proyecto_Android_Ebooks/app/src/main/res/drawable/rectangle.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Proyecto_Android_Ebooks/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/alvar/AndroidStudioProjects/Proyecto_Android_Ebooks/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Proyecto_Android_Ebooks/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Proyecto_Android_Ebooks/app/src/main/res/layout/activity_signup.xml" value="0.2" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Proyecto_Android_Ebooks/app/src/main/res/layout/signup.xml" value="0.10185185185185185" />
         <entry key="..\:/programacion moviles/Proyectos/Proyecto_Android_Ebooks/app/src/main/res/drawable/ic_add.xml" value="0.2695" />
         <entry key="..\:/programacion moviles/Proyectos/Proyecto_Android_Ebooks/app/src/main/res/drawable/ic_home.xml" value="0.2695" />
         <entry key="..\:/programacion moviles/Proyectos/Proyecto_Android_Ebooks/app/src/main/res/drawable/ic_person.xml" value="0.2695" />
