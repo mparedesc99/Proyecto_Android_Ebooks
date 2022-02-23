@@ -10,5 +10,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();// Esto es para ocultar la barra superior que aparece por defecto con el nombre de la aplicación
+
     }
 }

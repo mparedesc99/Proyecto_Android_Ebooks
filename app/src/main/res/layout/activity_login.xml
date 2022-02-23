@@ -15,6 +15,7 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mailLogin"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -26,10 +27,10 @@
             app:boxCornerRadiusTopEnd="24dp"
             app:boxCornerRadiusTopStart="24dp"
             app:boxStrokeColor="@color/white"
-            app:startIconDrawable="@drawable/email_vector"
-            app:boxStrokeWidthFocused="0dp"
             app:boxStrokeWidth="0dp"
-            app:hintEnabled="false">
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:startIconDrawable="@drawable/email_vector">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -40,21 +41,22 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLogin"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="15dp"
             android:foregroundGravity="center"
             android:gravity="center"
             app:boxCornerRadiusBottomEnd="24dp"
             app:boxCornerRadiusBottomStart="24dp"
             app:boxCornerRadiusTopEnd="24dp"
             app:boxCornerRadiusTopStart="24dp"
-            app:startIconDrawable="@drawable/password_key_vector"
-            android:layout_margin="15dp"
-            app:boxStrokeWidthFocused="0dp"
             app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
             app:endIconMode="password_toggle"
-            app:hintEnabled="false">
+            app:hintEnabled="false"
+            app:startIconDrawable="@drawable/password_key_vector">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -73,11 +75,12 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnLogin"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"
                 android:backgroundTint="#9CFBFBFB"
+                android:onClick="login"
                 android:text="Log in"
                 android:textColor="#000000"
                 app:cornerRadius="24dp" />
