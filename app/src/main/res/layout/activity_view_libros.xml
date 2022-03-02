@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="Detalles de el libro"
+        android:textColor="@color/purple_700"
+        android:textSize="26dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/view_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/icono" />
+
+    <TextView
+        android:id="@+id/view_isbn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_img"
+        android:layout_marginTop="20dp"
+        android:text="ISBN: "
+        android:textColor="@color/black"
+        android:textSize="19dp" />
+    <TextView
+        android:id="@+id/view_isbnText"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_img"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:text="texto"
+        android:textColor="@color/black"
+        android:textSize="19dp" />
+
+    <TextView
+        android:id="@+id/view_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_isbn"
+        android:layout_marginTop="20dp"
+        android:text="Título: "
+        android:textColor="@color/black"
+        android:textSize="19dp" />
+    <TextView
+        android:id="@+id/view_tituloText"
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_isbn"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:text="texto"
+        android:textColor="@color/black"
+        android:textSize="19dp" />
+
+    <TextView
+        android:id="@+id/view_autor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_titulo"
+        android:layout_marginTop="20dp"
+        android:text="Autor: "
+        android:textSize="19dp"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/view_autorText"
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_titulo"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:text="texto"
+        android:textColor="@color/black"
+        android:textSize="19dp" />
+
+    <TextView
+        android:id="@+id/view_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_autor"
+        android:layout_marginTop="20dp"
+        android:text="Descripción: "
+        android:textSize="19dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/view_descripcionText"
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_autor"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:text="texto"
+        android:textColor="@color/black"
+        android:textSize="19dp" />
+
+    <Button
+        android:id="@+id/view_btnDelete"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_descripcion"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#DC3C3C"
+        android:text="ELIMINAR" />
+
+    <Button
+        android:id="@+id/view_btnVolver"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_descripcion"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#898C89"
+        android:text="VOLVER" />
+
+
+</RelativeLayout>

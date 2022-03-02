@@ -33,10 +33,12 @@
             app:startIconDrawable="@drawable/email_vector">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lg_email"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:hint="Email Address"
+                android:inputType="text"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,10 +61,12 @@
             app:startIconDrawable="@drawable/password_key_vector">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lg_passwd"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:hint="Password"
+                android:inputType="text"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,7 +79,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/lg_btn_login"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"
@@ -86,7 +90,7 @@
                 app:cornerRadius="24dp" />
 
             <TextView
-                android:id="@+id/toLogIn"
+                android:id="@+id/lg_btn_register"
                 android:layout_width="132dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"

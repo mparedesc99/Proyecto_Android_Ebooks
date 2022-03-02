@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_Android_Ebooks">
         <activity
+            android:name=".UpdateLibrosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewLibrosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddLibrosAvtivity"
+            android:exported="false" />
+        <activity
+            android:name=".InsertLibrosActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="true" />
         <activity

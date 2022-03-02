@@ -1,22 +1,32 @@
 package com.example.proyecto_android_ebooks;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
+    //variables a usar
+    private TextView lg_email,lg_passwd,btn_register;
+    private Button btn_login;
+    private FirebaseAuth mAuth;
 
-    TextView tx;
-    TextInputLayout mail;
-    TextInputLayout password;
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,29 +38,63 @@ public class LoginActivity extends AppCompatActivity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        //ocultacion de la barra principal
         getSupportActionBar().hide();
-
-    tx = (TextView) findViewById(R.id.toLogIn);
-    tx.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-                Intent it=new Intent(view.getContext(),SignUpActivity.class);
-                startActivity(it);
-        }
-    });
-        mail = findViewById(R.id.mailLogin);
-        password = findViewById(R.id.passwordLogin);
+        //asigancion de cada variable
+        lg_email = (TextView) findViewById(R.id.lg_email);
+        lg_passwd = (TextView) findViewById(R.id.lg_passwd);
+        btn_register = (TextView) findViewById(R.id.lg_btn_register);
+        btn_login = (Button) findViewById(R.id.lg_btn_login);
+        //obtenemos la instancia
+        mAuth = FirebaseAuth.getInstance();
+        //asignacion de el escuchador al boton registro
+        btn_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
+                    finish();
+            }
+        });
+        //asignacion de el escuchador al boton login
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login();
+            }
+        });
 
 }
 
-    public void login (View view){
-        Toast.makeText(this, mail.getEditText().getText(), Toast.LENGTH_SHORT).show();
-        if (mail.getEditText().getText().toString().equals("admin")&&password.getEditText().getText().toString().equals("admin")){
-            Intent it=new Intent(view.getContext(),MainActivity.class);
-            startActivity(it);
+    private void login() {
+        //asigancion de cada variable
+        String email = lg_email.getText().toString();
+        String passwd = lg_passwd.getText().toString();
+        //comprobacion de si estan vacios entonces mostrar un error con el mensaje
+        if (email.isEmpty()){
+            lg_email.setError("El email no puede estar vacio");
+            lg_email.requestFocus();
+        }else if (passwd.isEmpty()){
+            lg_passwd.setError("La contraseña no puede estar vacia");
+            lg_passwd.requestFocus();
+        }else {
+            //llamamos a la funcion de mauth sign para validar el email y la contraseña en authentication
+            mAuth.signInWithEmailAndPassword(email,passwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()){
+                        //mensaje de registro correcto
+                        Toast.makeText(LoginActivity.this, "Inició sesión con éxito", Toast.LENGTH_SHORT).show();
+                        //se cambia de activity
+                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        //finalizamos la activity actual
+                        finish();
+                    }else{
+                        //mensaje de error
+                        Toast.makeText(LoginActivity.this, "Error de inicio de sesión: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
         }
-
     }
 
 

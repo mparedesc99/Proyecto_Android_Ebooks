@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="Detalles de el libro"
+        android:textColor="@color/purple_700"
+        android:textSize="26dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/upd_isbn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo"
+        android:layout_marginTop="20dp"
+        android:hint="Enter your ISBN"
+        android:maxLength="13"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/upd_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upd_isbn"
+        android:layout_marginTop="20dp"
+        android:hint="Enter your titulo"
+        android:maxLength="20"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/upd_autor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upd_titulo"
+        android:layout_marginTop="20dp"
+        android:hint="Enter your Autor"
+        android:maxLength="20"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/upd_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upd_autor"
+        android:layout_marginTop="20dp"
+        android:hint="Enter your Descripcion"
+        android:maxLength="58"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/upd_btnUpdate"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upd_descripcion"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#74D152"
+        android:text="ACTUALIZAR" />
+
+    <Button
+        android:id="@+id/upd_btnDelete"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upd_descripcion"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#DF4040"
+        android:text="ELIMINAR" />
+
+    <Button
+        android:id="@+id/upd_btnVolver"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upd_btnDelete"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#403E3E"
+        android:text="VOLVER" />
+
+
+
+</RelativeLayout>

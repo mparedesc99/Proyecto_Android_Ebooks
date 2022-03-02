@@ -34,6 +34,7 @@
             app:startIconDrawable="@drawable/ic_person">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rg_name"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
@@ -59,10 +60,12 @@
             app:hintEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rg_email"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:hint="Email Address"
+                android:inputType="text"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,19 +87,60 @@
             app:hintEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rg_passwd"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:hint="Password"
+                android:inputType="text"
                 android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            app:boxCornerRadiusBottomEnd="24dp"
+            app:boxCornerRadiusBottomStart="24dp"
+            app:boxCornerRadiusTopEnd="24dp"
+            app:boxCornerRadiusTopStart="24dp"
+            app:startIconDrawable="@drawable/password_key_vector"
+            android:layout_margin="15dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeWidth="0dp"
+            app:endIconMode="password_toggle"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rg_passwdAgain"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:hint="Password Again"
+                android:inputType="text"
+                android:textSize="20sp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/rg_checkVendedor"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text=" ¿Eres vendedor?"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <CheckBox
+            android:id="@+id/rg_checkTerminos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="I agree to terms and conditions"
             android:textColor="#FFFFFF" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,7 +150,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/rg_btn_login"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"
@@ -116,7 +160,7 @@
                 app:cornerRadius="24dp" />
 
             <TextView
-                android:id="@+id/toLogIn"
+                android:id="@+id/rg_toLogIn"
                 android:layout_width="132dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"

@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/Home"
-        android:title="Home"
+    <item android:id="@+id/biblioteca"
+        android:enabled="true"
+        android:title="Biblioteca"
         android:icon="@drawable/ic_home" />
 
-    <item android:id="@+id/Search"
-        android:title="Search"
+    <item android:id="@+id/busqueda"
+        android:enabled="true"
+        android:title="Búsqueda"
         android:icon="@drawable/ic_search" />
 
-    <item android:id="@+id/placeholder"
+    <item android:id="@+id/vacio"
+        android:enabled="true"
         android:title="" />
 
-    <item android:id="@+id/Profile"
-        android:title="Profile"
+    <item android:id="@+id/perfil"
+        android:enabled="true"
+        android:title="Perfíl"
         android:icon="@drawable/ic_person" />
 
-    <item android:id="@+id/Settings"
-        android:title="Settings"
+    <item android:id="@+id/ajustes"
+        android:enabled="true"
+        android:title="Ajustes"
         android:icon="@drawable/ic_settings" />
 </menu>
