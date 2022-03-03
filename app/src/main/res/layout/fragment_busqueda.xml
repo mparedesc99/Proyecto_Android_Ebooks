@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:circularflow_angles="20dp"
+    app:circularflow_defaultRadius="20dp"
+    tools:context=".BusquedaFragment">
+
+    <SearchView
+        android:id="@+id/busqueda"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Buscar título"
+        android:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerBusqueda"
+        android:layout_width="match_parent"
+        android:layout_height="540dp"
+        android:layout_below="@+id/busqueda"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarSize="20dp" />
+
+</RelativeLayout>

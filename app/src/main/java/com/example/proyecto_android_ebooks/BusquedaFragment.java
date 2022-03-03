@@ -1,7 +1,6 @@
 package com.example.proyecto_android_ebooks;
 
 import android.content.Intent;
-import android.graphics.ColorSpace;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,20 +13,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
 
-import com.google.firebase.FirebaseOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
-//este fragment va vacio
-public class BibliotecaFragment extends Fragment implements MyAdapter.ListItemClickListener{
+public class BusquedaFragment extends Fragment implements MyAdapter.ListItemClickListener, SearchView.OnQueryTextListener{
 
     private RecyclerView recyclerView;
     private ArrayList<Libro> list;
@@ -35,8 +30,9 @@ public class BibliotecaFragment extends Fragment implements MyAdapter.ListItemCl
     private DatabaseReference databaseReference,referenceUser;
     private String uuid;
     private boolean isVendedor;
+    private SearchView busqueda;
 
-    public BibliotecaFragment() {
+    public BusquedaFragment() {
         // Required empty public constructor
     }
 
@@ -51,8 +47,10 @@ public class BibliotecaFragment extends Fragment implements MyAdapter.ListItemCl
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_biblioteca, container, false);
-        recyclerView = view.findViewById(R.id.recyclerBiblioteca);
+        View view = inflater.inflate(R.layout.fragment_busqueda, container, false);
+        //barra de busqueda
+        busqueda = view.findViewById(R.id.busqueda);
+        recyclerView = view.findViewById(R.id.recyclerBusqueda);
         list = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         myAdapter = new MyAdapter(getContext(),list,this);
@@ -89,6 +87,9 @@ public class BibliotecaFragment extends Fragment implements MyAdapter.ListItemCl
             }
         });
 
+        //llamada a la funcion
+        busqueda.setOnQueryTextListener(this);
+
         return view;
     }
 
@@ -117,5 +118,31 @@ public class BibliotecaFragment extends Fragment implements MyAdapter.ListItemCl
 
         }
     }
+
+    //metodo implementado por el serachQuery para la barra de busqueda
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        //solo para cuando se pulsa enter
+        return false;
+    }
+    //metodo implementado por el serachQuery para la barra de busqueda
+    @Override
+    public boolean onQueryTextChange(String text) {
+        //para que cuando pulsemos alguna letra actualice
+        filter(text);
+        return true;
+    }
+    //metodo filtro para el searchview que va en onQueryTextChange
+    private void filter(String text){
+        ArrayList<Libro> filtroLista = new ArrayList<>();
+        for (Libro libro: list) {
+            if (libro.getTitulo().toLowerCase().contains(text.toLowerCase())){
+                filtroLista.add(libro);
+            }
+        }
+        myAdapter.filterList(filtroLista);
+
+    }
+
 
 }

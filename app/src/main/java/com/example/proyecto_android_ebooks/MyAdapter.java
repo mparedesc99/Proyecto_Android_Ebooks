@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     //variables a usar
@@ -21,10 +22,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         this.context = context;
         this.list = list;
         this.mOnClickListener = onClickListener;
+//        this.originalItems = new ArrayList<>();
+//        originalItems.addAll(list);
     }
     //implementacion para el click en el recyclerview
     interface ListItemClickListener{
         void onListItemClick(int position);
+    }
+    //metodo para el filtrado de el serachView
+    public void filterList(ArrayList<Libro> filter){
+        list = filter;
+        notifyDataSetChanged();
     }
 
     @NonNull

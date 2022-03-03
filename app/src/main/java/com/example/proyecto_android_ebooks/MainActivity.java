@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -24,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
     //variables a usar
     private BottomNavigationView bottomNavigationView;
     private Fragment fragment;
@@ -49,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // Esto es para ocultar la barra superior que aparece por defecto con el nombre de la aplicación
         getSupportActionBar().hide();
-
         //declaracion de el fragment precargado con el que inicia
         fragment = new BibliotecaFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,fragment).commit();
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                        fragment = new BibliotecaFragment();
                        break;
                    case R.id.busqueda:
-                       fragment = new BibliotecaFragment();
+                       fragment = new BusquedaFragment();
                        break;
                    case R.id.perfil:
                        fragment = new PerfilFragment();
@@ -109,8 +109,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
-
 
 }

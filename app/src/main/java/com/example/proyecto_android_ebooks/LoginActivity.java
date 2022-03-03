@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     //variables a usar
-    private TextView lg_email,lg_passwd,btn_register;
+    private TextView lg_email,lg_passwd,btn_register,btnResetPasswd;
     private Button btn_login;
     private FirebaseAuth mAuth;
 
@@ -44,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         lg_email = (TextView) findViewById(R.id.lg_email);
         lg_passwd = (TextView) findViewById(R.id.lg_passwd);
         btn_register = (TextView) findViewById(R.id.lg_btn_register);
+        btnResetPasswd = (TextView) findViewById(R.id.lg_btn_ResetPasswd);
         btn_login = (Button) findViewById(R.id.lg_btn_login);
         //obtenemos la instancia
         mAuth = FirebaseAuth.getInstance();
@@ -51,8 +52,8 @@ public class LoginActivity extends AppCompatActivity {
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
-                    finish();
+                startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
+                finish();
             }
         });
         //asignacion de el escuchador al boton login
@@ -60,6 +61,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 login();
+            }
+        });
+        //asignacion de el escuchador al boton reset de la passwd
+        btnResetPasswd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this,ResetPasswordActivity.class));
+                finish();
             }
         });
 

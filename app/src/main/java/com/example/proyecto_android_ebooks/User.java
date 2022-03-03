@@ -1,15 +1,16 @@
 package com.example.proyecto_android_ebooks;
 //Clase usuario con su constructor y atributos
 public class User {
-    String name,email,passwd;
+    String name,date,email,passwd;
     Boolean vendedor;
 
     public User() {
         //constructor requerido
     }
 
-    public User(String name, String email, String passwd, Boolean vendedor) {
+    public User(String name, String date, String email, String passwd, Boolean vendedor) {
         this.name = name;
+        this.date = date;
         this.email = email;
         this.passwd = passwd;
         this.vendedor = vendedor;
@@ -18,6 +19,8 @@ public class User {
     public String getName() {
         return name;
     }
+
+    public String getDate() {return date;}
 
     public String getEmail() {
         return email;
