@@ -1,5 +1,7 @@
 package com.example.proyecto_android_ebooks;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Switch;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -53,12 +57,51 @@ public class AjustesFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ajustes, container, false);
+        View v = inflater.inflate(R.layout.fragment_ajustes, container, false);
+        final Switch s = v.findViewById(R.id.dayNight);
+        final MainActivity ma  = (MainActivity)getActivity();
+        SharedPreferences sp = ma.getSharedPreferences("sp", ma.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        int theme  = sp.getInt("Theme", 1);
+        if (theme==1){
+            s.setChecked(false);
+        }else{
+            s.setChecked(true);
+        }
+        s.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (s.isChecked()){
+                    editor.putInt("Theme", 0);
+                }else{
+                    editor.putInt("Theme", 1);
+                }
+                editor.commit();
+                ma.setDayNight();
+            }
+        });
+
+        Button b = (Button) v.findViewById(R.id.bExit);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                getActivity().startActivity(intent);
+                getActivity().finish();
+                editor.putInt("Theme", 0);
+                editor.commit();
+            }
+        });
+
+        return v;
+
     }
+
+
 }
