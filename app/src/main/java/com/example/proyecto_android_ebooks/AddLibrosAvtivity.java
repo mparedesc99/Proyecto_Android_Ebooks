@@ -78,8 +78,9 @@ public class AddLibrosAvtivity extends AppCompatActivity implements MyAdapter.Li
             String autor = list.get(position).getAutor().toString();
             String descripcion = list.get(position).getDescripcion().toString();
             String id = list.get(position).getId();
+            String txt = list.get(position).getHistoria();
             //creamos el objeto libro
-            Libro libro = new Libro(id,isbn,titulo,autor,descripcion);
+            Libro libro = new Libro(id,isbn,titulo,autor,descripcion, txt);
             //primero guardamos los libros por vendedor
             databaseUser.child(uuid).child(id).setValue(libro).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override

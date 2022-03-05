@@ -49,11 +49,13 @@
                 android:id="@+id/dayNight"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:drawableStart="@drawable/night_mode"
                 android:elevation="20dp"
                 android:minHeight="32dp"
                 android:paddingLeft="24dp"
                 android:text="Modo Oscuro"
                 android:textSize="20dp"
+                android:theme="@style/Theme.Proyecto_Android_Ebooks"
                 tools:ignore="TouchTargetSizeCheck" />
         </androidx.cardview.widget.CardView>
 

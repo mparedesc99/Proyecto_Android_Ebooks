@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class ViewLibrosActivity extends AppCompatActivity {
     //variables a usar
     private Button view_btnDelete,view_btnVolver;
-    private TextView view_isbn,view_titulo,view_autor,view_descripcion;
+    private TextView view_isbn,view_titulo,view_autor,view_descripcion, txt;
     private ArrayList<Libro> list;
     private DatabaseReference databaseReference;
     private String uuid,id;
@@ -50,6 +50,7 @@ public class ViewLibrosActivity extends AppCompatActivity {
         view_titulo = (TextView) findViewById(R.id.view_tituloText);
         view_autor = (TextView) findViewById(R.id.view_autorText);
         view_descripcion = (TextView) findViewById(R.id.view_descripcionText);
+        txt=(TextView) findViewById(R.id.view_Text);
         //obtenemos el uuid de el usuario en linea
         uuid = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
         //usamos el paquete bundle para el traspaso de informacion
@@ -60,12 +61,14 @@ public class ViewLibrosActivity extends AppCompatActivity {
             String titulo = libro.getString("titulo");
             String autor = libro.getString("autor");
             String descripcion = libro.getString("descripcion");
+            String texto = libro.getString("historia");
             //id de el libro
             id = libro.getString("id");
             view_isbn.setText(isbn);
             view_titulo.setText(titulo);
             view_autor.setText(autor);
             view_descripcion.setText(descripcion);
+            txt.setText(texto);
         }
 
         view_btnVolver.setOnClickListener(new View.OnClickListener() {

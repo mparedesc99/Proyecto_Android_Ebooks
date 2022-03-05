@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class InsertLibrosActivity extends AppCompatActivity {
     //variables a usar
     private Button ins_btnInsert,ins_btnVolver;
-    private EditText ins_isbn,ins_titulo,ins_autor,ins_descripcion;
+    private EditText ins_isbn,ins_titulo,ins_autor,ins_descripcion,ins_texto ;
     private DatabaseReference database;
     private String uuid;
 
@@ -44,6 +44,7 @@ public class InsertLibrosActivity extends AppCompatActivity {
         ins_titulo = (EditText) findViewById(R.id.ins_titulo);
         ins_autor = (EditText) findViewById(R.id.ins_autor);
         ins_descripcion = (EditText) findViewById(R.id.ins_descripcion);
+        ins_texto = (EditText) findViewById(R.id.ins_txt);
         //obtenemos la instancia
         database = FirebaseDatabase.getInstance().getReference();
         //obtenemos el uuid de user en linea
@@ -72,10 +73,11 @@ public class InsertLibrosActivity extends AppCompatActivity {
         String titulo = ins_titulo.getText().toString();
         String autor = ins_autor.getText().toString();
         String descripcion = ins_descripcion.getText().toString();
+        String historia = ins_texto.getText().toString();
         // genera un uuid aleatorio
         String id = database.push().getKey();
         //creamos el objeto libro
-        Libro libro = new Libro(id,isbn,titulo,autor,descripcion);
+        Libro libro = new Libro(id,isbn,titulo,autor,descripcion, historia);
         //primero guardamos los libros por vendedor
         database.child(uuid).child(id).setValue(libro).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

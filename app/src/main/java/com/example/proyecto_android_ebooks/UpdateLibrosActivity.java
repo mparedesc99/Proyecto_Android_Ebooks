@@ -24,7 +24,7 @@ public class UpdateLibrosActivity extends AppCompatActivity {
 
     //variables a usar
     private Button upd_btnUpdate,upd_btnDelete,upd_btnVolver;
-    private EditText upd_isbn,upd_titulo,upd_autor,upd_descripcion;
+    private EditText upd_isbn,upd_titulo,upd_autor,upd_descripcion, udp_txt;
     private DatabaseReference databaseReference;
     private String uuid,id;
 
@@ -47,6 +47,7 @@ public class UpdateLibrosActivity extends AppCompatActivity {
         upd_titulo = (EditText) findViewById(R.id.upd_titulo);
         upd_autor = (EditText) findViewById(R.id.upd_autor);
         upd_descripcion = (EditText) findViewById(R.id.upd_descripcion);
+        udp_txt = (EditText) findViewById(R.id.upd_txt);
         //obtenemos el uuid de el usuario en linea
         uuid = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
         //obtenemos la instancia
@@ -59,12 +60,14 @@ public class UpdateLibrosActivity extends AppCompatActivity {
             String titulo = libro.getString("titulo");
             String autor = libro.getString("autor");
             String descripcion = libro.getString("descripcion");
+            String txt = libro.getString("historia");
             //id de el libro
             id = libro.getString("id");
             upd_isbn.setText(isbn);
             upd_titulo.setText(titulo);
             upd_autor.setText(autor);
             upd_descripcion.setText(descripcion);
+            udp_txt.setText(txt);
         }
 
         upd_btnUpdate.setOnClickListener(new View.OnClickListener() {
@@ -151,9 +154,9 @@ public class UpdateLibrosActivity extends AppCompatActivity {
         String titulo = upd_titulo.getText().toString();
         String autor = upd_autor.getText().toString();
         String descripcion = upd_descripcion.getText().toString();
-
+        String txt =udp_txt.getText().toString();
         //creamos el objeto libro
-        Libro libro = new Libro(id,isbn,titulo,autor,descripcion);
+        Libro libro = new Libro(id,isbn,titulo,autor,descripcion, txt);
         //primero actualizamos los libros por vendedor
         databaseReference.child(uuid).child(id).setValue(libro).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
