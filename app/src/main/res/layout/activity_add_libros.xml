@@ -4,22 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddLibrosAvtivity">
+    tools:context=".AddLibrosAvtivity"
+    android:background="@drawable/rectangle">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="CLICK PARA AÑADIR EL LIBRO"
-            android:textColor="#6429CD"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="CLICK PARA AÑADIR EL LIBRO"
+                android:textColor="#6429CD"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/add_recyclerView"

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.MenuItem;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         //declaracion de el fragment precargado con el que inicia
         fragment = new BibliotecaFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,fragment).commit();

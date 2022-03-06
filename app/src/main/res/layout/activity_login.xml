@@ -4,14 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    android:background="@drawable/rectangle"
     android:orientation="vertical"
-    android:background="@drawable/rectangle">
+    tools:context=".LoginActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="30dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="30dp"
+        app:cardMaxElevation="30dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/arizonia"
+            android:gravity="center"
+            android:text="Book Palace"
+            android:textSize="80dp" />
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -77,8 +101,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
             android:gravity="center"
-            android:textColor="@color/white"
-            android:text="Olvidaste la contraseña?" />
+            android:text="Olvidaste la contraseña?"
+            android:textColor="@color/white" />
 
         <LinearLayout
             android:layout_width="match_parent"

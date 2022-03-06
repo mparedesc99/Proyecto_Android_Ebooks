@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -39,6 +40,7 @@ public class AddLibrosAvtivity extends AppCompatActivity implements MyAdapter.Li
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_libros);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         recyclerView = findViewById(R.id.add_recyclerView);
         list = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

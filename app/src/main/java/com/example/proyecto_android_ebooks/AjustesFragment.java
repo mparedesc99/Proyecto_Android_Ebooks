@@ -84,6 +84,8 @@ public class AjustesFragment extends Fragment {
                 }
                 editor.commit();
                 ma.setDayNight();
+
+
             }
         });
 
