@@ -41,8 +41,6 @@ public class LoginActivity extends AppCompatActivity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        //ocultacion de la barra principal
-        getSupportActionBar().hide();
         //asigancion de cada variable
         lg_email = (TextView) findViewById(R.id.lg_email);
         lg_passwd = (TextView) findViewById(R.id.lg_passwd);

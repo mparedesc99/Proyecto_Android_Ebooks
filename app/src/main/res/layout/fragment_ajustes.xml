@@ -75,6 +75,7 @@
             android:elevation="20dp"
             android:text="Cerrar Sesión"
             android:textColor="#FF0000"
+            android:theme="@style/Theme.data"
             app:cornerRadius="24dp" />
 
     </LinearLayout>

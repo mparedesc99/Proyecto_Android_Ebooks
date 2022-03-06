@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Esto es para ocultar la barra superior que aparece por defecto con el nombre de la aplicación
-        getSupportActionBar().hide();
         //declaracion de el fragment precargado con el que inicia
         fragment = new BibliotecaFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,fragment).commit();

@@ -4,129 +4,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/rectangle"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@drawable/rectangle">
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="104dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        app:cardCornerRadius="10dp">
-
-        <TextView
-            android:id="@+id/titulo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center_horizontal"
-            android:text="Detalles de el libro"
-            android:textColor="@color/black"
-            android:textSize="26dp"
-            android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="468dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="10dp"
-        app:cardCornerRadius="10dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/upd_autor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:hint="Enter your Autor"
-                android:maxLength="20"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/upd_isbn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:hint="Enter your ISBN"
-                android:maxLength="13"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/upd_titulo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:hint="Enter your titulo"
-                android:maxLength="20"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/upd_descripcion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:hint="Enter your Descripcion"
-                android:maxLength="58"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/upd_txt"
-                android:layout_width="match_parent"
-                android:layout_height="162dp"
-                android:layout_marginTop="20dp"
-                android:hint="Enter your Text"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="Detalles de el libro"
+                android:textColor="@color/black"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="437dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/upd_autor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Ingrese el Autor"
+                    android:maxLength="20"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/upd_isbn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Ingrese el ISBN"
+                    android:maxLength="13"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/upd_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Ingrese el titulo"
+                    android:maxLength="20"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/upd_descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Ingrese la Descripcion"
+                    android:maxLength="58"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/upd_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Ingrese el Texto"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/upd_btnDelete"
+                    android:layout_width="150dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#DF4040"
+                    android:text="ELIMINAR" />
+
+                <Button
+                    android:id="@+id/upd_btnUpdate"
+                    android:layout_width="150dp"
+                    android:layout_height="49dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#74D152"
+                    android:text="ACTUALIZAR" />
+
+            </LinearLayout>
 
             <Button
-                android:id="@+id/upd_btnDelete"
-                android:layout_width="150dp"
+                android:id="@+id/upd_btnVolver"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:backgroundTint="#DF4040"
-                android:text="ELIMINAR" />
-
-            <Button
-                android:id="@+id/upd_btnUpdate"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#74D152"
-                android:text="ACTUALIZAR" />
-
+                android:backgroundTint="#403E3E"
+                android:text="VOLVER" />
         </LinearLayout>
-
-        <Button
-            android:id="@+id/upd_btnVolver"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#403E3E"
-            android:text="VOLVER" />
     </LinearLayout>
 
 

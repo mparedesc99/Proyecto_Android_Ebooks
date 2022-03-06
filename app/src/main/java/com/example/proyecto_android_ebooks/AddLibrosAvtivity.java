@@ -39,8 +39,6 @@ public class AddLibrosAvtivity extends AppCompatActivity implements MyAdapter.Li
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_libros);
-        //ocultacion de la barra principal
-        getSupportActionBar().hide();
         recyclerView = findViewById(R.id.add_recyclerView);
         list = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

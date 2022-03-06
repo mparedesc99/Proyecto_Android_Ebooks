@@ -31,8 +31,6 @@ public class ResetPasswordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_password);
-        //ocultacion de la barra principal
-        getSupportActionBar().hide();
         //obtenemos la instancia
         mAuth = FirebaseAuth.getInstance();
         //asigancion de cada variable

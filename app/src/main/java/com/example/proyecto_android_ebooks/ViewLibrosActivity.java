@@ -41,8 +41,6 @@ public class ViewLibrosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_libros);
 
-        //ocultacion de la barra principal
-        getSupportActionBar().hide();
         //asigancion de cada variable
         view_btnDelete = (Button) findViewById(R.id.view_btnDelete);
         view_btnVolver = (Button) findViewById(R.id.view_btnVolver);

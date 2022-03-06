@@ -48,8 +48,6 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        //ocultacion de la barra principal
-        getSupportActionBar().hide();
         //asigancion de cada variable
         rg_date = (EditText) findViewById(R.id.rg_date);
         rg_name = (TextView) findViewById(R.id.rg_name);
@@ -88,6 +86,7 @@ public class SignUpActivity extends AppCompatActivity {
                 // Le pasamos lo que haya en las globales
                 DatePickerDialog dialogoFecha = new DatePickerDialog(SignUpActivity.this, listenerDeDatePicker, ultimoAnio, ultimoMes, ultimoDiaDelMes);
                 //Mostrar
+
                 dialogoFecha.show();
             }
         });

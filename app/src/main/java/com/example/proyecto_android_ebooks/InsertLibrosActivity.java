@@ -35,8 +35,6 @@ public class InsertLibrosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insert_libros);
 
-        //ocultacion de la barra principal
-        getSupportActionBar().hide();
         //asigancion de cada variable
         ins_btnInsert = (Button) findViewById(R.id.ins_btnInsert);
         ins_btnVolver = (Button) findViewById(R.id.ins_btnVolver);

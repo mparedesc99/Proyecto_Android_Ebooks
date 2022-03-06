@@ -1,13 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Proyecto_Android_Ebooks" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="Theme.Proyecto_Android_Ebooks" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimary">#686767</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">#B5B2B2</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/white</item>
-        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorSecondary">@color/morado_100</item>
+        <item name="colorSecondaryVariant">#575656</item>
         <item name="colorOnSecondary">#202020</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">#7b3260</item>
@@ -17,4 +17,33 @@
     <style name="SplashTheme" parent="Theme.Proyecto_Android_Ebooks">
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
+
+    <style name="Theme.data" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/morado_100</item>
+        <item name="colorSecondaryVariant">#575656</item>
+        <item name="colorOnSecondary">#202020</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">#7b3260</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.bar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/morado_100</item>
+        <item name="colorSecondaryVariant">#575656</item>
+        <item name="colorOnSecondary">#202020</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">#7b3260</item>
+        <!-- Customize your theme here. -->
+    </style>
+
 </resources>

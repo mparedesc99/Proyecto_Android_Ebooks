@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="Enter your title"
+                android:hint="Ingrese el titulo"
                 android:maxLength="20"
                 android:textSize="20dp" />
 
@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="Enter your ISBN"
+                android:hint="Ingrese el ISBN"
                 android:maxLength="13"
                 android:textSize="20dp" />
 
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="Enter your Descripcion"
+                android:hint="Ingresa la Descripcion"
                 android:maxLength="58"
                 android:textSize="20dp" />
 
@@ -73,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="Enter your Autor"
+                android:hint="Ingresa el Autor"
                 android:maxLength="20"
                 android:textSize="20dp" />
 
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="187dp"
                 android:layout_marginTop="20dp"
-                android:hint="Enter your Text"
+                android:hint="Ingrese la Historia"
                 android:textSize="20dp" />
         </LinearLayout>
 

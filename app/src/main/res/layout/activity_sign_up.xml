@@ -40,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:hint="Name and subName"
+                android:hint="Nombre y Apellidos"
                 android:inputType="text"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -99,7 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:hint="Email Address"
+                android:hint="Direccion de Correo"
                 android:inputType="text"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -126,7 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:hint="Password"
+                android:hint="Contraseña"
                 android:inputType="textPassword"
                 android:textSize="20sp" />
 
@@ -154,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:hint="Password Again"
+                android:hint="Repetir Contraseña"
                 android:inputType="textPassword"
                 android:textSize="20sp" />
 
@@ -173,7 +173,7 @@
             android:id="@+id/rg_checkTerminos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="I agree to terms and conditions"
+            android:text="Estoy de acuerdo con los terminos y condiciones"
             android:textColor="#FFFFFF" />
 
         <LinearLayout
@@ -190,7 +190,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"
                 android:backgroundTint="#9CFBFBFB"
-                android:text="Sign Up"
+                android:text="Iniciar Sesión"
                 android:textColor="#000000"
                 app:cornerRadius="24dp" />
 
@@ -200,7 +200,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="Already have an account? > "
+                android:text="Ya tengo cuenta > "
                 android:textColor="@color/white"
                 android:textColorLink="#FFFFFF" />
 
